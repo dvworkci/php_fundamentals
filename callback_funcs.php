@@ -10,9 +10,19 @@ define("EL","\n");
 
 $arr1 = [1,2,3,4];
 
-$arr2 = array_map(function($element){
+// $arr2 = array_map(function($element){
+//     return $element * 2;
+// }, $arr1);
+
+// $func = function($element) {
+//     return $element * 2;
+// };
+
+function foo($element){
     return $element * 2;
-}, $arr1);
+}
+
+$arr2 = array_map('foo',$arr1);
 
 print_r($arr1) . EL;
 print_r($arr2) . EL;

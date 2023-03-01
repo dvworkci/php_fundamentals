@@ -1,3 +1,5 @@
 <?php
+// define('EL','<br>');
 
-echo "Hello from file.php" . "<br>";
+$x = 5;
+// echo "Hello from file.php" . "<br>";
