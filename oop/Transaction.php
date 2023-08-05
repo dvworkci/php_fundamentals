@@ -4,10 +4,24 @@ declare(strict_types=1);
 class Transaction 
 {
 
-    private float $amount;
-    public string $description;
+    // public ?Customer $customer = null;
+    private ?Customer $customer = null;
+    // private float $amount;
+    // private string $description;
 
-    public function __construct(float $amount,string $description)
+    // Simple constructor
+    // public function __construct(float $amount,string $description)
+    // {
+    //     $this->amount = $amount;
+    //     $this->description = $description;
+    // }
+
+    // Constructor property promotion
+    // NOTE: you can type hint any type except callable
+    public function __construct(
+        private float $amount,
+        private string $description = 'Unknown transaction'
+    )
     {
         $this->amount = $amount;
         $this->description = $description;
@@ -36,9 +50,14 @@ class Transaction
         return $this->description;
     }
 
-    // Destructor
-    public function __destruct()
+    public function getCustomer(): ?Customer
     {
-        echo 'Destruct ' . $this->description . '<br />';
+        return $this->customer;
     }
+
+    // Destructor
+    // public function __destruct()
+    // {
+    //     echo 'Destruct ' . $this->description . '<br />';
+    // }
 }
