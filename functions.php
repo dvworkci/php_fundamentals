@@ -43,7 +43,7 @@ function super(): void {
 	return;
 }
 
-// If function also wants to return null value 
+// If function also wants to return null value other than usual types use the following syntax
 function hey(): ?int {
 	return null;
 }

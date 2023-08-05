@@ -115,6 +115,7 @@ $arr2 = ['e','f','g','h','i'];
 $resArray = $arr1 + $arr2;
 print_r($resArray);
 
-
-
-
+// fdiv()
+$number_one = 10;
+$number_two = 0;
+var_dump(fdiv($number_one,$number_two));    // float(INF)
