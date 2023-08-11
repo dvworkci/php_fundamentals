@@ -10,9 +10,19 @@ require __DIR__ . '/../../vendor/autoload.php';
 //     }
 // });
 
-use Ramsey\Uuid\UuidFactory;
+// use Ramsey\Uuid\UuidFactory;
+
+use App\Enum\Status;
 use App\PaymentGateway\Paddle\Transaction;
-$paddleTransaction = new Transaction();
-// var_dump($paddleTransaction);
-$id = new UuidFactory();
-echo $id->uuid4();
+// $paddleTransaction = new Transaction();
+// // var_dump($paddleTransaction);
+// $id = new UuidFactory();
+// echo $id->uuid4();
+
+// We don't have to instantiate a class to use it's class constant.
+// We can do it using it's class name.
+// echo Transaction::STATUS_PAID;
+
+$transaction = new Transaction();
+$transaction->setStatus(Status::PAID);
+var_dump($transaction);
