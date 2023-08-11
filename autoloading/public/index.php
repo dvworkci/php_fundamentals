@@ -12,7 +12,8 @@ require __DIR__ . '/../../vendor/autoload.php';
 
 // use Ramsey\Uuid\UuidFactory;
 
-use App\Enum\Status;
+use App\DB;
+use App\Enums\Status;
 use App\PaymentGateway\Paddle\Transaction;
 // $paddleTransaction = new Transaction();
 // // var_dump($paddleTransaction);
@@ -24,5 +25,7 @@ use App\PaymentGateway\Paddle\Transaction;
 // echo Transaction::STATUS_PAID;
 
 $transaction = new Transaction();
-$transaction->setStatus(Status::PAID);
-var_dump($transaction);
+$db = DB::getInstance([]);
+// $transaction->setStatus(Status::PAID);
+// var_dump($transaction::getCount());
+var_dump($db);
