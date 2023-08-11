@@ -12,7 +12,7 @@ class Transaction
 
     public function __construct()
     {
-        $this->setStatus(Status::STATUS_PENDING);
+        $this->setStatus(Status::PENDING);
         // We can access constants in a class like this : -
         // var_dump(self::STATUS_PAID);
     }
